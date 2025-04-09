@@ -1,0 +1,12 @@
+<estudiantes>
+<estuidante>
+    <nombre>jhon</nombre>
+    <apellido>mendez</apellido>
+    <edad>45</edad>
+</estuidante>
+<estuidante>
+    <nombre>maria</nombre>
+    <apellido>gonzalez</apellido>
+    <edad>34</edad>
+</estuidante>
+<estudiantes/>

@@ -1,0 +1,6 @@
+nombre apellido
+juan perez
+pedro ramirez
+jose mendez
+maria gonzalez
+ines rivera
