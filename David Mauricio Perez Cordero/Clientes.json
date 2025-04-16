@@ -1,0 +1,22 @@
+{
+    "clientes": [
+      {
+        "123": {
+          "NOMBRE": "jhon",
+          "APELLIDO": "mendez",
+          "CORREO": "jhon@gmail.com",
+          "TELEFONO": "32145859",
+          "DIRECCION": "calle falsa 123",
+          "PREFERENCIAL": false
+        },
+        "456": {
+          "NOMBRE": "juan",
+          "APELLIDO": "pere",
+          "CORREO": "juan@gmail.com",
+          "TELEFONO": "32445859",
+          "DIRECCION": "calle falsa 456",
+          "PREFERENCIAL": true
+        }
+      }
+    ]
+  }
