@@ -1,11 +1,50 @@
+import json
+
 clientes = {
     123: {
         "NOMBRE": "jhon", "APELLIDO": "mendez", "CORREO": "jhon@gmail.com", "TELEFONO": "32145859", "DIRECCION": "calle falsa 123", "PREFERENCIAL": False
     },
     456: {
-        "NOMBRE": "juan", "APELLIDO": "pere", "CORREO": "juan@gmail.com", "TELEFONO": "32445859", "DIRECCION": "calle falsa 456", "PREFERENCIAL": True
+        "NOMBRE": "juan", "APELLIDO": "perez", "CORREO": "juan@gmail.com", "TELEFONO": "32445859", "DIRECCION": "calle falsa 456", "PREFERENCIAL": True
     }
 }
+
+def manejar_json(archivo='clientes.json', datos=None):
+    """
+    Lee o escribe datos en un archivo JSON.
+    Si datos=None, lee el archivo; de lo contrario, escribe los datos.
+    """
+    if datos is None:  # Modo lectura
+        try:
+            with open(archivo, 'r') as f:
+                # Convertir las claves de string a enteros (las cédulas)
+                datos_cargados = json.load(f)
+                return {int(k): v for k, v in datos_cargados.items()}
+        except FileNotFoundError:
+            return {}
+    else:  # Modo escritura
+        # Convertir las claves de enteros a strings para JSON
+        datos_a_guardar = {str(k): v for k, v in datos.items()}
+        with open(archivo, 'w') as f:
+            json.dump(datos_a_guardar, f, indent=4)
+
+# Cargar clientes desde el archivo al inicio
+clientes = manejar_json()
+
+# Si no hay clientes en el archivo, usar los datos de ejemplo
+if not clientes:
+    clientes = {
+        123: {
+            "NOMBRE": "jhon", "APELLIDO": "mendez", "CORREO": "jhon@gmail.com", 
+            "TELEFONO": "32145859", "DIRECCION": "calle falsa 123", "PREFERENCIAL": False
+        },
+        456: {
+            "NOMBRE": "juan", "APELLIDO": "perez", "CORREO": "juan@gmail.com", 
+            "TELEFONO": "32445859", "DIRECCION": "calle falsa 456", "PREFERENCIAL": True
+        }
+    }
+    # Guardar los datos de ejemplo en el archivo
+    manejar_json(datos=clientes)
 
 def imprimir_menu():
     menu = """
@@ -48,6 +87,8 @@ def registrar_cliente():
             "DIRECCION": direccion,
             "PREFERENCIAL": preferencial
         }
+        # Guardar cambios en el archivo
+        manejar_json(datos=clientes)
         print(f"Cliente con cédula {cedula} registrado correctamente.")
     except ValueError:
         print("Error: La cédula y el teléfono deben ser números.")
@@ -57,6 +98,8 @@ def eliminar_cliente():
         cedulaCliente = int(input("\nIngrese la cédula del cliente: "))
         if cedulaCliente in clientes:
             del clientes[cedulaCliente]
+            # Guardar cambios en el archivo
+            manejar_json(datos=clientes)    
             print(f"Cliente {cedulaCliente} eliminado correctamente.")
         else:
             print(f"Cliente {cedulaCliente} no encontrado.")
