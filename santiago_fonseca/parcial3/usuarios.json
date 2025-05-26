@@ -1,0 +1,79 @@
+[
+  {
+    "usuario": "martin",
+    "titulo": "estudiante",
+    "descripcion": "se esta portando bien",
+    "tareas": "no tiene",
+    "estado": "activo"
+  },
+  {
+    "usuario": "juan",
+    "titulo": "medico",
+    "descripcion": "revisar al paciente",
+    "tareas": "ir por el medicamento",
+    "estado": "activo"
+  },
+  {
+    "usuario": "maria",
+    "titulo": "profesora",
+    "descripcion": "dar clases",
+    "tareas": "revisar examenes",
+    "estado": "activo"
+  },
+  {
+    "usuario": "pedro",
+    "titulo": "ingeniero",
+    "descripcion": "trabajar en el proyecto",
+    "tareas": "reunirse con el cliente",
+    "estado": "activo"
+  },
+  {
+    "usuario": "luisa",
+    "titulo": "abogada",
+    "descripcion": "defender al cliente",
+    "tareas": "preparar la defensa",
+    "estado": "activo"
+  },
+  {
+    "usuario": "carlos",
+    "titulo": "arquitecto",
+    "descripcion": "diseñar el edificio",
+    "tareas": "hacer los planos",
+    "estado": "activo"
+  },
+  {
+    "usuario": "sofia",
+    "titulo": "diseñadora",
+    "descripcion": "crear el logo",
+    "tareas": "hacer el boceto",
+    "estado": "activo"
+  },
+  {
+    "usuario": "jose",
+    "titulo": "programador",
+    "descripcion": "desarrollar la aplicacion",
+    "tareas": "escribir el codigo",
+    "estado": "activo"
+  },
+  {
+    "usuario": "laura",
+    "titulo": "contadora",
+    "descripcion": "hacer la contabilidad",
+    "tareas": "revisar los libros",
+    "estado": "activo"
+  },
+  {
+    "usuario": "andres",
+    "titulo": "fotografo",
+    "descripcion": "tomar fotos",
+    "tareas": "editar las fotos",
+    "estado": "activo"
+  },
+  {
+    "usuario": "san",
+    "titulo": "pres",
+    "descripcion": "uno muy bueno",
+    "tareas": "estudiar",
+    "estado": "liquido"
+  }
+]
